@@ -1,9 +1,5 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-
-[RequireComponent (typeof (BoxCollider2D))]
 
 public class PlayerMove : MonoBehaviour 
 {
@@ -24,27 +20,24 @@ public class PlayerMove : MonoBehaviour
 		if (isGrounded())
 			jumps = 0;
 
-		if(jumps < maxJumps)
+		//Time.timeScale = 5f;
+
+		if(jumps < maxJumps && Input.GetKeyDown(up))
 		{
-			if (Input.GetKeyDown(up)) 
-			{
-				rigidbody2D.AddForce(Vector3.up * (jumpForce + rigidbody2D.velocity.y));
+				GetComponent<Rigidbody2D>().AddForce(Vector3.up * (jumpForce + GetComponent<Rigidbody2D>().velocity.y));
 				jumps++;
 				playerMotionContoller.SetBool("jump", true);
-				//playerMotionContoller.SetBool("jump", false);
-			}
-
 		}
 
 		if (Input.GetKey(left)) 
 		{
-			rigidbody2D.AddForce(Vector3.left * movementForce);
+			GetComponent<Rigidbody2D>().AddForce(Vector3.left * movementForce);
 			playerMotionContoller.SetBool("walk", true);
 		}
 
 		else if (Input.GetKey(right)) 
 		{
-			rigidbody2D.AddForce(Vector3.right * movementForce);
+			GetComponent<Rigidbody2D>().AddForce(Vector3.right * movementForce);
 			playerMotionContoller.SetBool("walk", true);
 		}
 		else
