@@ -5,7 +5,6 @@ public class rotatePlayer : MonoBehaviour
 {
 
 	public GameObject Player1, Player2;
-	public bool isPlayer1 = true;
 	double player1p, player2p;
 	double centerPoint;
 	void Update()
@@ -18,18 +17,8 @@ public class rotatePlayer : MonoBehaviour
 		centerPoint = Player1.transform.position.x - (player1p - player2p);
 
 		//rotate player
-		if(transform.position.x > centerPoint && isPlayer1)
+		if(transform.position.x < centerPoint)
 			transform.rotation *= Quaternion.Euler(0,  180,  0);
-
-		Debug.Log ("center "+centerPoint+" player1 "+player1p+" player2 "+player2p);
-		/*else if(transform.position.x > centerPoint && !isPlayer1)
-			transform.rotation = Quaternion.Euler(0,  0,  0);
-
-		else if(transform.position.x < centerPoint && isPlayer1)
-			transform.rotation = Quaternion.Euler(0,  0,  0);
-
-		else if(transform.position.x < centerPoint && !isPlayer1)
-			transform.rotation = Quaternion.Euler(0,  180,  0);*/
 	}
 
 }

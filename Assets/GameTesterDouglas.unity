@@ -172,7 +172,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 446426158}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.88000011, y: -.75999999, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children: []
@@ -230,7 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1: {fileID: 446426158}
   Player2: {fileID: 1025057363}
-  isPlayer1: 1
 --- !u!1001 &506129106
 Prefab:
   m_ObjectHideFlags: 0
@@ -282,7 +281,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: dad30d1515891e248993c0feb4855b4a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dad30d1515891e248993c0feb4855b4a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &687106379
@@ -351,9 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24185dfb09b983b45a791a042ea90d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  resetZone: 0
 --- !u!1 &1025057363
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +364,7 @@ GameObject:
   - 61: {fileID: 1025057366}
   - 114: {fileID: 1025057365}
   - 95: {fileID: 1025057364}
+  - 114: {fileID: 1025057370}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -479,6 +477,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1025057370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025057363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4d913b52ebebc4a87f9faf7a35767e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 1025057363}
+  Player2: {fileID: 446426158}
 --- !u!1001 &1130584017
 Prefab:
   m_ObjectHideFlags: 0
@@ -529,24 +540,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 899e0e9bef79f534f8f144dfc43e6dcc, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1391336277
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: dad30d1515891e248993c0feb4855b4a, type: 2}
-  m_PrefabInternal: {fileID: 506129106}
---- !u!114 &1391336280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1391336277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24185dfb09b983b45a791a042ea90d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  resetZone: 0
 --- !u!1001 &1623383164
 Prefab:
   m_ObjectHideFlags: 0

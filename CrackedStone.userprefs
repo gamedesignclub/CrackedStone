@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\rotatePlayer.cs">
     <Files>
-      <File FileName="CrackedStone.sln" Line="1" Column="1" />
-      <File FileName="Assets\rotatePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\rotatePlayer.cs" Line="22" Column="24" />
       <File FileName="Assets\PlayerMove.cs" Line="57" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
