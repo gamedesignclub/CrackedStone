@@ -14,6 +14,13 @@ public class PlayerMove : MonoBehaviour
 	public KeyCode right;
 
 	public Animator playerMotionContoller;
+	public Vector3 eulerAngles;
+
+	void Start()
+	{
+		eulerAngles = transform.rotation.eulerAngles;
+	}
+
 
 	void Update () 
 	{
@@ -44,6 +51,11 @@ public class PlayerMove : MonoBehaviour
 		{
 			playerMotionContoller.SetBool("walk", false);
 		}
+
+		//lock the z axis
+
+		eulerAngles = new Vector3(0, eulerAngles.y, eulerAngles.z);
+		transform.rotation = Quaternion. Euler(eulerAngles);
 	}
 
 	bool isGrounded()
