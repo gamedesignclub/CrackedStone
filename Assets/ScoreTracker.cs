@@ -36,6 +36,12 @@ public class ScoreTracker : MonoBehaviour
 		player1Text.text = "" + player1Score;
 		player2Text.text = "" + player2Score;
 
+		if (player1Score == 5)
+			Application.LoadLevel (1);
+
+		else if (player2Score == 5)
+			Application.LoadLevel (1);
+
 	}
 
 }

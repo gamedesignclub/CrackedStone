@@ -44,23 +44,19 @@ public class PlayerMove : MonoBehaviour
 				audio.PlayOneShot(jump);
 				GetComponent<Rigidbody2D>().AddForce(Vector3.up * (jumpForce + GetComponent<Rigidbody2D>().velocity.y));
 				jumps++;
-				playerMotionContoller.SetBool("jump", true);
+				playerMotionContoller.SetTrigger("jump");
 		}
 
 		if (Input.GetKey(left)) 
 		{
 			GetComponent<Rigidbody2D>().AddForce(Vector3.left * movementForce);
-			playerMotionContoller.SetBool("walk", true);
+			playerMotionContoller.SetTrigger("walk");
 		}
 
 		else if (Input.GetKey(right)) 
 		{
 			GetComponent<Rigidbody2D>().AddForce(Vector3.right * movementForce);
-			playerMotionContoller.SetBool("walk", true);
-		}
-		else
-		{
-			playerMotionContoller.SetBool("walk", false);
+			playerMotionContoller.SetTrigger("walk");
 		}
 
 		//lock the z axis
