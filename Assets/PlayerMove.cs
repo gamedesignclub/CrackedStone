@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
 {
 	public float colliderSize = 1;
 	public int jumps = 0;
-	public static int maxJumps = 3;
+	public static int maxJumps = 2;
 	public int jumpForce = 500, temp;
 	public int movementForce = 70;
 	public GameObject floor;

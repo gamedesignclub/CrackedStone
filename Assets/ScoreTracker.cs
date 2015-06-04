@@ -10,8 +10,6 @@ public class ScoreTracker : MonoBehaviour
 	public GameObject player1, player2;
 	public Text player1Text, player2Text;
 
-	float a = 0f;
-
 	void Start()
 	{
 		player2Pos = player2.transform.position;
@@ -20,13 +18,13 @@ public class ScoreTracker : MonoBehaviour
 
 	void Update () {
 		//code
-		if (player1.transform.position.y < -11) 
+		if (player1.transform.position.y < -11 || player1.transform.position.x < -15 || player1.transform.position.x > 15) 
 		{
 			player2Score++;
 			player1.transform.position = player1Pos;
 			player2.transform.position=  player2Pos;
 		}
-		else if (player2.transform.position.y < -11) 
+		else if (player2.transform.position.y < -11 || player2.transform.position.x < -15 || player2.transform.position.x > 15) 
 		{
 			player1Score ++;
 			player1.transform.position = player1Pos;
@@ -37,10 +35,10 @@ public class ScoreTracker : MonoBehaviour
 		player2Text.text = "" + player2Score;
 
 		if (player1Score == 5)
-			Application.LoadLevel (1);
+			Application.LoadLevel (2);
 
 		else if (player2Score == 5)
-			Application.LoadLevel (1);
+			Application.LoadLevel (2);
 
 	}
 
